@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="css/element.css">
+  <link rel="stylesheet" href="css/fonts/element-icons.woff">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<script src="js/vue.js"></script>
+<script src="js/element.js"></script>
+<div id="app">
+  <el-container style="width:100%;background-color: #f6f6f6;">
+    <el-header class="header cs" style="width: 1120px;margin: 0 auto;">
+      <img src="img/logo.jpg" alt="" class="lf">
+      <ul class="rt cs">
+        <li>首页</li>
+        <li>交易</li>
+        <li>财务</li>
+        <li>安全</li>
+        <li>帮助</li>
+      </ul>
+    </el-header>
+    <div class="cs-title">
+      <a href="">首页</a>>
+      <a href="">安全信息</a>>银行卡管理</div>
+    <el-container style="width: 1120px;margin: 0 auto;">
+      <el-aside width="200px">
+        <ul class="con-left">
+          <li v-for="item in left">{{item}}</li>
+        </ul>
+      </el-aside>
+      <el-main class="cs">
+        <div class="right-title">收款设置</div>
+        <div class="right-ts">设置收款方式，必须是本人账号</div>
+        <el-switch
+          v-model="value2"
+          active-color="#13ce66"
+          inactive-color="#ff4949">
+        </el-switch>
+        <el-form ref="form" :model="sizeForm" label-width="80px" size="mini">
+          <el-form-item label="姓名：">
+            <el-input v-model="sizeForm.name"></el-input>
+          </el-form-item>
+        </el-form>
+        <el-form ref="form" :model="sizeForm" label-width="80px" size="mini">
+          <el-form-item label="开户银行：">
+            <el-input v-model="sizeForm.name"></el-input>
+          </el-form-item>
+        </el-form>
+        <el-form ref="form" :model="sizeForm" label-width="80px" size="mini">
+          <el-form-item label="开户支行：">
+            <el-input v-model="sizeForm.name"></el-input>
+          </el-form-item>
+        </el-form>
+        <el-form ref="form" :model="sizeForm" label-width="80px" size="mini">
+          <el-form-item label="银行卡号：">
+            <el-input v-model="sizeForm.name"></el-input>
+          </el-form-item>
+        </el-form>
+        <el-form ref="form" :model="sizeForm" label-width="80px" size="mini">
+          <el-form-item label="资金密码：">
+            <el-input v-model="sizeForm.name"></el-input>
+          </el-form-item>
+        </el-form>
+        <el-upload
+          action="https://jsonplaceholder.typicode.com/posts/"
+          list-type="picture-card"
+          :on-preview="handlePictureCardPreview"
+          :on-remove="handleRemove">
+          <i class="el-icon-plus"></i>
+        </el-upload>
+        <el-dialog :visible.sync="dialogVisible">
+          <img width="100%" :src="dialogImageUrl" alt="">
+        </el-dialog>
+      </el-main>
+    </el-container>
+  </el-container>
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      left: [
+        '安全中心',
+        '实名认证',
+        '修改登录密码',
+        '修改交易密码',
+        '设置双重验证',
+        '手机绑定',
+        '实名认证',
+        '交易密码输入设置',
+        '银行卡管理',
+        '钱包地址管理',
+        '登录日志'
+      ],
+      sizeForm: {
+        name: '',
+        region: '',
+        date1: '',
+        date2: '',
+        delivery: false,
+        type: [],
+        resource: '',
+        desc: ''
+      },
+      dialogImageUrl: '',
+      dialogVisible: false,
+      value1: true,
+      value2: true
+    },
+    methods: {
+      onSubmit() {
+        console.log('submit!');
+      },
+      handleRemove(file, fileList) {
+        console.log(file, fileList);
+      },
+      handlePictureCardPreview(file) {
+        this.dialogImageUrl = file.url;
+        this.dialogVisible = true;
+      }
+    },
+
+
+  })
+</script>
+
+</body>
+</html>

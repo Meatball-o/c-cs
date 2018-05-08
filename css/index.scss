@@ -1,85 +1,123 @@
+$color:#F37427;
 .el-main {
   text-align: left;
-  border-top: 1px solid #d6d6d6;
-  border-bottom: 1px solid #d6d6d6;
-  border-right: 1px solid #d6d6d6;
-}
-
-.el-switch {
-  width: 100%;
-  .el-switch__core {
-    margin-left: 860px;
-  }
-}
-
-.el-main {
+  border-top: 1px solid #D5D5D5;
+  border-bottom: 1px solid #D5D5D5;
+  border-right: 1px solid #D5D5D5;
   background-color: #fff !important;
   padding: 0 !important;
 }
-
 .el-aside {
-  background-color: #f6f6f6;
+  background-color: #f8f8f8;
   text-align: left;
   box-sizing: border-box;
-  border-top: 1px solid #d6d6d6;
-  border-bottom: 1px solid #d6d6d6;
-  border-left: 1px solid #d6d6d6;
-
+  border-top: 1px solid #D5D5D5;
+  border-bottom: 1px solid #D5D5D5;
+  border-left: 1px solid #D5D5D5;
+}
+.el-form-item__label {
+  padding-left: 20px;
+  width: 130px !important;
 }
 
-.el-header, .el-footer {
-  text-align: left;
-  height: 80px !important;
-  background-color: #eeeeee !important;
-  padding: 0 !important;
+.el-form-item__content {
+  margin-left: 130px !important;
+  .el-input__inner {
+    width: 300px;
+  }
 }
-
 .cs-title {
   width: 1120px;
   margin: 0 auto;
   height: 44px;
   line-height: 44px;
   a {
-    color: #e66111;
+    color: $color;
   }
 }
 
+.c-cs {
+  width: 100%;
+  background-color: #f8f8f8;
+  .index-h{
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    .index-h-con{
+      width: 1120px;
+      margin: 0 auto;
+      ul{
+        li{
+          float: left;
+          a{
+            color: #1696D5;
+          }
+          &:first-child{
+            color: $color;
+          }
+          &:nth-child(2){
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+  }
+  .header {
+    background-color: #efefef;
+    width:100%;
+    margin: 0 auto;
+    height: 80px;
+    .header-con {
+      width: 1120px;
+      margin: 0 auto;
+      img {
+        text-align: left;
+        padding-top: 5px;
+        height: 70px;
+        box-sizing: border-box;
+      }
+      ul {
+        width: 500px;
+        li {
+          float: left;
+          display: inline-block;
+          font-size: 16px;
+          width: 100px;
+          height: 80px;
+          line-height: 80px;
+          text-align: center;
+        }
+      }
+    }
+
+  }
+}
 .con-left li {
   height: 40px;
   line-height: 40px;
   padding-left: 44px;
   border-left: 2px solid transparent;
   border-right: 1px solid #d6d6d6;
-}
-
-.con-left li:nth-child(9) {
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  border-left: 2px solid #e66111;
-  background-color: #fff;
-  border-right: 1px solid transparent;
-  color: #e66111;
-
-}
-
-.header {
-  img {
-    text-align: left;
-    padding-top: 5px;
-    height: 70px;
-    box-sizing: border-box;
+  &:nth-child(9){
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 2px solid $color;
+    background-color: #fff;
+    border-right: 1px solid transparent;
+    color: $color;
   }
-  ul {
-    width: 500px;
-    li {
-      float: left;
-      display: inline-block;
-      font-size: 16px;
-      width: 100px;
-      height: 80px;
-      line-height: 80px;
-      text-align: center;
-    }
+}
+.binding-card{
+  width: 919px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #D4D4D4;
+  .el-switch{
+    margin-top: 10px;
   }
 }
 
@@ -88,29 +126,19 @@
   line-height: 40px;
   font-size: 16px;
   font-weight: bold;
-  color: #e66111;
-  border-bottom: 2px solid #e66111;
+  border-bottom: 2px solid $color;
   padding: 0 20px;
   box-sizing: border-box;
 }
-.right-ts{
+.right-ts {
   height: 60px;
   line-height: 60px;
-  color: #e66111;
-  border: 1px solid rgba(37, 170, 163, 0.14);
-  background-color: rgba(140, 247, 255, 0.11);
+  color: $color;
+  border: 1px solid #D0E9FD;
+  background-color: #F0F7FF;
   border-radius: 6px;
   box-sizing: border-box;
   padding: 0 15px;
-  margin: 20px;
+  margin: 20px 20px 0 20px ;
 }
-.el-form-item__label{
-  padding-left: 20px;
-  width: 130px!important;
-}
-.el-form-item__content{
-  margin-left: 130px!important;
-  .el-input__inner{
-    width: 300px;
-  }
-}
+
